@@ -1,0 +1,262 @@
+/* General Styles for All Screens */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    
+}
+
+.main {
+    width: 100%;
+    overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+/* Navbar */
+.nav-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #333;
+    color: #fff;
+}
+
+.nav-logo h2, .nav-logo h3 {
+    margin: 0;
+}
+
+.nav-items {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-items a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.hamburger {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Home Section */
+.home-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+}
+
+.info-box {
+    max-width: 50%;
+}
+
+.card {
+    max-width: 40%;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+/* About Section */
+.about-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+}
+
+.about-img img {
+    max-width: 100%;
+    height: auto;
+}
+
+.about-info {
+    max-width: 50%;
+}
+
+/* Skills Section */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 2rem;
+}
+
+.skills-card {
+    width: 30%;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.skills-card img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+/* Projects Section */
+.flip-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 2rem;
+}
+
+.flip-card-inner {
+    width: 30%;
+    margin-bottom: 2rem;
+}
+
+/* Contact Section */
+.contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+}
+
+.contact-form {
+    width: 50%;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+/* Footer */
+.last-text {
+    text-align: center;
+    padding: 1rem;
+    background-color: #333;
+    color: #fff;
+}
+
+/* Media Queries for Mobile Devices */
+@media screen and (max-width: 789px) {
+    /* Navbar */
+    .nav-items {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #333;
+        padding: 1rem;
+    }
+
+    .nav-items.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    /* Home Section */
+    .home-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .info-box, .card {
+        max-width: 100%;
+    }
+
+    /* About Section */
+    .about-main {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-info {
+        max-width: 100%;
+    }
+
+    /* Skills Section */
+    .skills-card {
+        width: 100%;
+    }
+
+    /* Projects Section */
+    .flip-card-inner {
+        width: 100%;
+    }
+
+    /* Contact Section */
+    .contact {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact-form {
+        width: 100%;
+    }
+}
+
+/* General Styles for All Images */
+img {
+    max-width: 100%; /* Ensure images don't exceed their container's width */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove extra space below images */
+}
+
+/* Specific Adjustments for Images in Different Sections */
+
+/* Home Section - Profile Image */
+.home-content .card img {
+    width: 100%; /* Make the image fill its container */
+    border-radius: 10px; /* Optional: Add rounded corners */
+}
+
+/* About Section - Profile Image */
+.about-main .about-img img {
+    width: 100%; /* Make the image fill its container */
+    max-width: 300px; /* Limit maximum width for larger screens */
+    border-radius: 10px; /* Optional: Add rounded corners */
+}
+
+/* Skills Section - Skill Icons */
+.skills-card img {
+    width: 80px; /* Fixed size for skill icons */
+    height: 80px; /* Fixed size for skill icons */
+    object-fit: contain; /* Ensure icons fit without distortion */
+    margin: 0 auto 1rem; /* Center the icons and add spacing */
+}
+
+/* Projects Section - Project Images */
+.flip-card-front img {
+    width: 100%; /* Make the image fill its container */
+    height: 200px; /* Fixed height for project images */
+    object-fit: cover; /* Ensure images cover the area without distortion */
+    border-radius: 10px; /* Optional: Add rounded corners */
+}
+
+/* Media Queries for Mobile Devices */
+@media screen and (max-width: 789px) {
+    /* Home Section - Profile Image */
+    .home-content .card img {
+        width: 80%; /* Reduce image size on smaller screens */
+        margin: 0 auto; /* Center the image */
+    }
+
+    /* About Section - Profile Image */
+    .about-main .about-img img {
+        max-width: 200px; /* Reduce image size on smaller screens */
+    }
+
+    /* Skills Section - Skill Icons */
+    .skills-card img {
+        width: 60px; /* Reduce icon size on smaller screens */
+        height: 60px; /* Reduce icon size on smaller screens */
+    }
+
+    /* Projects Section - Project Images */
+    .flip-card-front img {
+        height: 150px; /* Reduce image height on smaller screens */
+    }
+}
